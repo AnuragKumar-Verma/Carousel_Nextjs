@@ -1,0 +1,5 @@
+const { MongoClient } = require( "mongodb" )
+const client = new MongoClient('mongodb://localhost:27017')
+ client.connect()
+ .then(() => console.log( 'Connected to MongoDB' ))
+ .catch((err) => console.log('Could not connect to MongoDB',  err))
